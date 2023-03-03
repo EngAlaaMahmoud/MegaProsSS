@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Costura.Fody.3.3.3\build\Costura.Fody.props" Condition="Exists('packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3F3193E-4E14-4105-843B-D98E3F85AF62}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SchoolSystemERP</RootNamespace>
+    <AssemblyName>SchoolSystemERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>F:\eqraa deploy versions\sh\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>MegaProSS</ProductName>
+    <PublisherName>alaa mahmoud</PublisherName>
+    <SuiteName>MegaProSS</SuiteName>
+    <ApplicationRevision>27</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2FC494F8EF3089EA6E97D0A7A8BAD46FC4DD2E07</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SchoolSystemERP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Bunifu.Charts.WinForms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.Charts.WinForms.2.0.0\lib\net40\Bunifu.Charts.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.Licensing.5.0.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.6.0.1\lib\net40\Bunifu.UI.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharpSigned.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SchoolDBDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Attendance\AttendenceTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Attendance\AttendenceTeacher.Designer.cs">
+      <DependentUpon>AttendenceTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Attendance\AttendenceSt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Attendance\AttendenceSt.Designer.cs">
+      <DependentUpon>AttendenceSt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Exams\MainRsMenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Exams\MainRsMenue.Designer.cs">
+      <DependentUpon>MainRsMenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Exams\Stage3Rs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Exams\Stage3Rs.Designer.cs">
+      <DependentUpon>Stage3Rs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Exams\Stage2Rs .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Exams\Stage2Rs .Designer.cs">
+      <DependentUpon>Stage2Rs .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Others\DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Others\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Others\Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Others\Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Acc\Fees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Acc\Fees.Designer.cs">
+      <DependentUpon>Fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Others\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Others\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Others\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Others\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Acc\OutGo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Acc\OutGo.Designer.cs">
+      <DependentUpon>OutGo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Others\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Others\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Item Screen\StClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Item Screen\StClass.Designer.cs">
+      <DependentUpon>StClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Exams\Stage1Rs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Exams\Stage1Rs.Designer.cs">
+      <DependentUpon>Stage1Rs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Exams\StResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Exams\StResults.Designer.cs">
+      <DependentUpon>StResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Item Screen\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Item Screen\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Item Screen\Teachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Item Screen\Teachers.Designer.cs">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Screens\Attendance\AttendenceTeacher.resx">
+      <DependentUpon>AttendenceTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Attendance\AttendenceSt.resx">
+      <DependentUpon>AttendenceSt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Exams\MainRsMenue.resx">
+      <DependentUpon>MainRsMenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Exams\Stage3Rs.resx">
+      <DependentUpon>Stage3Rs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Exams\Stage2Rs .resx">
+      <DependentUpon>Stage2Rs .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Others\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Others\Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Acc\Fees.resx">
+      <DependentUpon>Fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Others\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Others\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Acc\OutGo.resx">
+      <DependentUpon>OutGo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Screens\Others\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Item Screen\StClass.resx">
+      <DependentUpon>StClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Exams\Stage1Rs.resx">
+      <DependentUpon>Stage1Rs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Exams\StResults.resx">
+      <DependentUpon>StResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Item Screen\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Item Screen\Teachers.resx">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SchoolDBDataSet11.xsc">
+      <DependentUpon>SchoolDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet11.xss">
+      <DependentUpon>SchoolDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet21.xsc">
+      <DependentUpon>SchoolDBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet21.xss">
+      <DependentUpon>SchoolDBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet31.xsc">
+      <DependentUpon>SchoolDBDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet31.xss">
+      <DependentUpon>SchoolDBDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet4.xsc">
+      <DependentUpon>SchoolDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet4.xss">
+      <DependentUpon>SchoolDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet41.xsc">
+      <DependentUpon>SchoolDBDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet41.xss">
+      <DependentUpon>SchoolDBDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet5.xsc">
+      <DependentUpon>SchoolDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet5.xss">
+      <DependentUpon>SchoolDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet6.xsc">
+      <DependentUpon>SchoolDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet6.xss">
+      <DependentUpon>SchoolDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolSystemERP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo.ico" />
+    <Content Include="SchoolDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SchoolDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SchoolDb.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MegaLibs\MegaLibs.csproj">
+      <Project>{98f7b446-6934-4113-ac38-e7ce6e3dd8e9}</Project>
+      <Name>MegaLibs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('packages\Fody.4.0.2\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Fody.4.0.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.4.0.2\build\Fody.targets'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.3.3.3\build\Costura.Fody.props'))" />
+  </Target>
+</Project>
